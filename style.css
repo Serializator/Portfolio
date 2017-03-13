@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Brie;
+    src: url("fonts/BRIE.TTF");
+}
+
+#social-links {
+    position: fixed;
+    top: 16px;
+    right: 28px;
+    list-style: none;
+}
+
+.social-link {
+    color: #FFFFFF;
+}
+
+.social-link:not(:last-child) {
+    margin-right: 12px;
+}
+
+.social-link-icon {
+    font-size: 3em !important;
+}
+
+#container {
+
+    /* Set the background to cover the background and have an overlay to make it a bit darker. */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/header.jpeg") fixed;
+    background-size: cover;
+    background-repeat: no-repeat;   
+
+    height: 100vh;
+    color: white;
+    font-family: Brie;
+}
+
+.section {
+    padding-top: 248px;
+}
+
+.section:not(:first-child) {
+    display: none;
+}
+
+#welcome-section {
+    text-align: center;
+}
+
+#welcome-section h1 {
+    font-size: 4em;
+}
+
+#welcome-section h2 {
+    margin-top: 42px;
+}
+
+#welcome-section h3 {
+    margin-top: 28px;
+}
+
+#navigation {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 62px;
+}
+
+#navigation ul {
+    list-style: none;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#navigation li {
+    display: inline;
+    padding: 12px 42px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+#navigation li:not(:last-child) {
+    margin-right: 32px;
+}
+
+#navigation li a {
+    color: white;
+    text-decoration: none;
+}
