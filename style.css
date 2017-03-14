@@ -8,6 +8,12 @@
     src: url("fonts/BRIE.TTF");
 }
 
+#container {
+
+    /* Prevent the scrollbar from appearing when sliding the sections to the right. */
+    overflow-x: hidden;
+}
+
 #social-links {
     position: fixed;
     top: 16px;
@@ -28,19 +34,20 @@
 }
 
 #container {
+    height: 100vh;
 
     /* Set the background to cover the background and have an overlay to make it a bit darker. */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/header.jpeg") fixed;
     background-size: cover;
     background-repeat: no-repeat;   
 
-    height: 100vh;
     color: white;
     font-family: Brie;
 }
 
 .section {
     padding-top: 248px;
+    min-height: 183px;
 }
 
 .section:not(:first-child) {
@@ -63,6 +70,27 @@
     margin-top: 28px;
 }
 
+#contact-section form input, textarea, button {
+    background: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    color: white;
+}
+
+#contact-section form input, textarea {
+    padding: 12px;
+}
+
+#contact-section form button {
+    padding: 12px 42px;
+}
+
+#contact-section form textarea {
+    width: 100%;
+    resize: none;
+}
+
 #navigation {
     text-align: center;
     font-size: 1.5em;
@@ -70,10 +98,10 @@
 }
 
 #navigation ul {
-    list-style: none;
-
     padding-top: 16px;
     padding-bottom: 16px;
+
+    list-style: none;
 }
 
 #navigation li {
@@ -89,7 +117,6 @@
     margin-right: 32px;
 }
 
-#navigation li a {
-    color: white;
-    text-decoration: none;
+#navigation li:hover {
+    cursor: pointer;
 }

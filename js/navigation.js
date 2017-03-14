@@ -1,10 +1,38 @@
-var currentSection = document.getElementById('welcome-section');
+$(document).ready(function() {
+    var $current;
+    var sliding = false;
 
-function go(section) {
-    var element = document.getElementById(section);
-    
-    $(currentSection).hide("slide", {direction: "left"}, 1000);
-    $(section).show("slide", {direction: "right"}, 1000);
+    /* Hide all sections except the first. */
+    $('#sections .section').each(function(index) {
+        var $element = $($('#sections .section').get(index));
+        
+        if(index == 0) {
+            $current = $element;
+        } else {
+            $element.hide();
+        }
+    });
 
-    currentSection = section;
-}
+    /* Attach an 'onclick' event to every navigation element. */
+    $('#navigation ul li').each(function(index) {
+        $(this).click(function() {
+            if(sliding != true) {
+                var $next = $('#' + $(this).data('section'));
+
+                if($current.attr('id') === $next.attr('id')) {
+                    return;
+                }
+
+                sliding = true;
+
+                $current.hide('slide', { direction: 'right' }, 250, function() {
+                    $next.show('slide', { direction: 'left' }, 500, function() {
+                        sliding = false;
+                    });
+                });
+
+                $current = $next;
+            }
+        });
+    });
+});
