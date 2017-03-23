@@ -70,6 +70,32 @@
     margin-top: 28px;
 }
 
+#projects-section #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+}
+
+#projects-section .project {
+    padding: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin-left: 18px;
+    margin-right: 18px;
+    width: 180px;
+    height: 180px;
+}
+
+#contact-section form {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #contact-section form input, textarea, button {
     background: transparent;
     border-style: solid;
@@ -119,4 +145,21 @@
 
 #navigation li:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+    .section {
+        padding-top: 100px;
+    }
+
+    #navigation li {
+        display: block;
+        max-width: 190px;
+        margin-left: auto;
+        margin-right: auto !important;
+    }
+
+    #navigation li:not(:last-child) {
+        margin-bottom: 32px;
+    }
 }
