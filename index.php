@@ -7,17 +7,19 @@
     <head>
         <title>Julian v.d Berkmortel</title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link type="text/css" rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <ul id="social-links">
-            <a class="social-link" href="https://twitter.com/Serializator" target="_blank"><li class="fa fa-twitter-square social-link-icon" aria-hidden="true"></li></a>
-            <a class="social-link" href="https://instagram.com/Serializator" target="_blank"><li class="fa fa-instagram social-link-icon" aria-hidden="true"></li></a>
-            <a class="social-link" href="https://github.com/Serializator" target="_blank"><li class="fa fa-github-square social-link-icon" aria-hidden="true"></li></a>
-        </ul>
-
         <div id="container">
+            <ul id="social-links">
+                <a class="social-link" href="https://twitter.com/Serializator" target="_blank"><li class="fa fa-twitter-square social-link-icon" aria-hidden="true"></li></a>
+                <a class="social-link" href="https://instagram.com/Serializator" target="_blank"><li class="fa fa-instagram social-link-icon" aria-hidden="true"></li></a>
+                <a class="social-link" href="https://github.com/Serializator" target="_blank"><li class="fa fa-github-square social-link-icon" aria-hidden="true"></li></a>
+            </ul>
+
             <div id="sections">
 
                 <!-- Welcome Section -->
@@ -31,7 +33,7 @@
                 <div id="projects-section" class="section">
                     <ul id="projects">
                         <li class="project">
-                            1th Project
+                            <img src="images/projects/portfolio.png" />
                         </li>
 
                         <li class="project">
@@ -40,6 +42,10 @@
 
                         <li class="project">
                             3rd Project
+                        </li>
+
+                        <li class="project">
+                            4rd Project
                         </li>
                     </ul>
                 </div>
