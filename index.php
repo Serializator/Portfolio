@@ -1,3 +1,7 @@
+<?php
+    $pdo = require_once('php/includes/database.php');
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,7 +51,7 @@
                         <input name="last-name" type="text" placeholder="Last Name"/>
                         <input name="email" type="text" placeholder="Email" />
                         <input name="subject" type="text" placeholder="Subject" />
-                        <textarea name="content" placeholder="What do you want to say?"></textarea>
+                        <textarea name="message" placeholder="What do you want to say?"></textarea>
 
                         <button type="submit">Send</button>
                         <button type="reset">Reset</button>
