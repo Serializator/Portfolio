@@ -50,8 +50,8 @@
         exit(1);
     }
 
-    $config = (require_once('../config.php'))['email'];
-    $pdo = require_once('../database.php');
+    $config = (require_once('../../includes/config.php'))['email'];
+    $pdo = require_once('../../includes/database.php');
 
     $mailed = mail($config['email'], $_POST['subject'], ('From: ' . $_POST['first-name'] . ' ' . $_POST['last-name'] . '\n\n' . $_POST['message']));
 
