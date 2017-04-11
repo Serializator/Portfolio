@@ -47,7 +47,7 @@
 
 .section {
     padding-top: 248px;
-    min-height: 183px;
+    min-height: 206px; 
 }
 
 .section:not(:first-child) {
