@@ -1,5 +1,5 @@
 <?php
-    $pdo = require_once('php/includes/database.php');
+    $mysql = require_once('php/includes/database.php');
 ?>
 
 <!DOCTYPE html>
@@ -53,14 +53,24 @@
                 <!-- Contact Section -->
                 <div id="contact-section" class="section">
                     <form>
+                        <span id="unexpected-error"></span>
+                    
+                        <span id="first-name-error"></span>
                         <input name="first-name" type="text" placeholder="First Name" />
+
+                        <span id="last-name-error"></span>
                         <input name="last-name" type="text" placeholder="Last Name"/>
+
+                        <span id="email-error"></span>
                         <input name="email" type="text" placeholder="Email" />
+
+                        <span id="subject-error"></span>
                         <input name="subject" type="text" placeholder="Subject" />
+
+                        <span id="message-error"></span>
                         <textarea name="message" placeholder="What do you want to say?"></textarea>
 
                         <button type="submit">Send</button>
-                        <button type="reset">Reset</button>
                     </form>
                 </div>
             </div>
