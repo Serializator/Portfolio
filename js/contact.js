@@ -24,7 +24,7 @@ $('#contact-section form').on('submit', function() {
 });
 
 function resetErrors() {
-    $('#contact-section input').each(function(index, input) {
+    $('#contact-section input, textarea').each(function(index, input) {
         var name = $(input).attr('name');
         var span = $('#' + name + '-error');
 
