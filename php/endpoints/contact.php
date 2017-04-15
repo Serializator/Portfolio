@@ -1,4 +1,6 @@
 <?php
+    require_once('../mail/class.phpmailer.php');
+
     $errors = array();
 
     if($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -31,14 +33,33 @@
     }
 
     if(sizeof($errors) == 0) {
-        $config = (require_once('../includes/config.php'))['email'];
-        $mailed = mail($config['email'], $_POST['subject'], ('From: ' . $_POST['first-name'] . ' ' . $_POST['last-name'] . '\n\n' . wordwrap($_POST['message'], 70, "\r\n")));
-
-        if($mailed !== true) {
+        if(sendMail($_POST['email'], $_POST['subject'], $_POST['message']) !== true) {
             http_response_code(500);
         }
     } else {
         http_response_code(400);
         print(json_encode($errors));
+    }
+
+    function sendMail($from, $name, $subject, $message) {
+        $config = (require_once('../includes/config/production.php'))['mail'];
+
+        $mailer = new PHPMailer();
+        $mailer->IsSMTP();
+        $mailer->CharSet = 'UTF-8';
+        $mailer->Host = 'smtp.live.com';
+        $mailer->SMTPAuth = true;
+        $mailer->Port = 587;
+        $mailer->Username = $config['username'];
+        $mailer->Password = $config['password'];
+        $mailer->SMTPSecure = 'tls';
+        $mailer->From = $from;
+        $mailer->FromName = $name;
+        $mailer->isHTML(true);
+        $mailer->Subject = $subject;
+        $mailer->Body = $message;
+        $mailer->addAddress($config['mail']);
+
+        return $mailer->send();
     }
 ?>

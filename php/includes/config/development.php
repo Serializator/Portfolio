@@ -7,7 +7,8 @@
             'username' => 'root',
             'password' => 'root'
         ), 'contact' => array(
-            'email' => 'julianvdberkmortel@outlook.com'
+            'username' => 'julianvdberkmortel@outlook.com',
+            'password' => '************'
         )
     );
 ?>
