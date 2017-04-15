@@ -1,6 +1,6 @@
 <?php
     return array(
-        'pdo' => array(
+        'mysql' => array(
             'host' => 'mysql',
             'port' => '3306',
             'database' => 'portfolio',
