@@ -6,7 +6,7 @@
             'database' => 'portfolio',
             'username' => 'root',
             'password' => 'root'
-        ), 'contact' => array(
+        ), 'mail' => array(
             'username' => 'julianvdberkmortel@outlook.com',
             'password' => '************'
         )
