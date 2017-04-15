@@ -2,7 +2,7 @@
     return array(
         'mysql' => array(
             'host' => 'mysql',
-            'port' => '3306',
+            'port' => 3306,
             'database' => 'portfolio',
             'username' => 'root',
             'password' => 'root'
