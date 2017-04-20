@@ -87,12 +87,17 @@
     margin-left: 18px;
     margin-right: 18px;
     width: 260px;
-    height: 200px;
+    height: 265px;
 }
 
 #projects-section .project .project-thumbnail {
     width: 260px;
     height: 136px;
+    margin-bottom: 8px;
+}
+
+#projects-section .project .project-category {
+    float: right;
 }
 
 #contact-section form {

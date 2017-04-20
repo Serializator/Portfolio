@@ -47,7 +47,8 @@
                             <li class="project">
                                 <img class="project-thumbnail" src="images/projects/<?php print(str_replace(' ', '-', strtolower($project['name']))) ?>.png" />
                                 <span class="project-name"><?php print($project['name']) ?></span>
-                                <span class="project-category"><?php print($project['category']) ?></span>
+                                <span class="project-category"><?php print($project['category']) ?></span><br /><br />
+                                <p class="project-description"><?php print($project['description'])  ?></p><br />
                                 <a class="project-github" href="https://github.com/Serializator/<?php print($project['git']) ?>" target="_blank">View on GitHub</a>
                             </li>
                         <?php endforeach; ?>
