@@ -3,7 +3,7 @@
     $projects = [];
     
     /* Fetch the projects from MySQL */
-    $projects_query = $mysql->query('SELECT `projects`.`id`, `projects`.`name`, `categories`.`name` AS `category`, `projects`.`git` FROM `projects` INNER JOIN `project_categories` AS `categories` ON `projects`.`category` = `categories`.`id`;');
+    $projects_query = $mysql->query('SELECT `projects`.`id`, `projects`.`name`, `categories`.`name` AS `category`, `projects`.`description`, `projects`.`git` FROM `projects` INNER JOIN `project_categories` AS `categories` ON `projects`.`category` = `categories`.`id`;');
     
     /* Copy the projects from the results into the local array. */
     while($project = $projects_query->fetch_assoc()) {
