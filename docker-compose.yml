@@ -18,9 +18,10 @@ services:
     links:
       - mysql
   mysql:
-    build: ./mysql
+    image: mysql:5.7
     volumes:
       - ./mysql/data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/portfolio.sql
     environment: 
       - 'MYSQL_ROOT_PASSWORD=root'
       - 'MYSQL_DATABASE=portfolio'
