@@ -58,6 +58,7 @@
                 <!-- Contact Section -->
                 <div id="contact-section" class="section">
                     <form>
+                        <span id="success">Your message has been successfully delivered.</span>
                         <span id="unexpected-error"></span>
                     
                         <span id="first-name-error"></span>

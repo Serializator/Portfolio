@@ -1,4 +1,5 @@
 <?php
+    $mysql = require_once('../includes/database.php');
     $errors = array();
 
     if($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -31,7 +32,10 @@
     }
 
     if(sizeof($errors) == 0) {
-        /* TODO: Put the contact request in the database. */
+        $statement = $mysql->prepare('INSERT INTO `contact_requests` (`first_name`, `last_name`, `email`, `subject`, `message`) VALUES (?, ?, ?, ?, ?);');
+        
+        $statement->bind_param('sssss', $_POST['first-name'], $_POST['last-name'], $_POST['email'], $_POST['subject'], $_POST['message']);
+        $statement->execute();
     } else {
         http_response_code(400);
         print(json_encode($errors));

@@ -127,6 +127,10 @@
     resize: none;
 }
 
+#contact-section span {
+    display: none;
+}
+
 #navigation {
     text-align: center;
     font-size: 1.5em;
