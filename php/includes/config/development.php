@@ -6,9 +6,6 @@
             'database' => 'portfolio',
             'username' => 'root',
             'password' => 'root'
-        ), 'mail' => array(
-            'username' => 'julianvdberkmortel@outlook.com',
-            'password' => '************'
         )
     );
 ?>
