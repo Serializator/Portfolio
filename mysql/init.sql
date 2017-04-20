@@ -78,6 +78,7 @@ CREATE TABLE `projects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(46) NOT NULL,
   `category` int(11) NOT NULL,
+  `description` text NOT NULL,
   `git` text NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
@@ -92,7 +93,7 @@ CREATE TABLE `projects` (
 
 LOCK TABLES `projects` WRITE;
 /*!40000 ALTER TABLE `projects` DISABLE KEYS */;
-INSERT INTO `projects` VALUES (5,'Portfolio',1,'Portfolio'),(6,'Guestbook',1,'Guestbook'),(7,'Safe',1,'Hydra'),(8,'Game World',1,'Atonish');
+INSERT INTO `projects` VALUES (5,'Portfolio',1,'My portfolio is meant to be the website that represents me on the internet and where people can contact me if interested.','Portfolio'),(6,'Guestbook',1,'Guestbook was given as an assignment at ROC Ter AA, I used a CSS framework named Materialize in it and some jQuery/AJAX.','Guestbook'),(7,'Safe',1,'Safe was a assignment given to the class I\'m in at ROC Ter AA to learn JavaScript and how you can use it to manipulate the DOM.','Hydra');
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -105,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-20 18:25:35
+-- Dump completed on 2017-04-20 19:27:57
