@@ -45,10 +45,10 @@
                         <!-- Loop through every project in the array and print a list element for it. -->
                         <?php foreach($projects as $project): ?>
                             <li class="project">
-                                <img id="project-thumbnail" src="images/projects/<?php print($project['name']) ?>.png" />
-                                <span id="project-name"><?php print($project['name']) ?></span>
-                                <span id="project-category"><?php print($project['category']) ?></span>
-                                <a id="project-github" href="https://github.com/Serializator/<?php print($project['git']) ?>" target="_blank">View on GitHub</a>
+                                <img class="project-thumbnail" src="images/projects/<?php print(str_replace(' ', '-', strtolower($project['name']))) ?>.png" />
+                                <span class="project-name"><?php print($project['name']) ?></span>
+                                <span class="project-category"><?php print($project['category']) ?></span>
+                                <a class="project-github" href="https://github.com/Serializator/<?php print($project['git']) ?>" target="_blank">View on GitHub</a>
                             </li>
                         <?php endforeach; ?>
                     </ul>

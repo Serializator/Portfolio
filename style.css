@@ -86,8 +86,13 @@
     border-color: white;
     margin-left: 18px;
     margin-right: 18px;
-    width: 180px;
-    height: 180px;
+    width: 260px;
+    height: 200px;
+}
+
+#projects-section .project .project-thumbnail {
+    width: 260px;
+    height: 136px;
 }
 
 #contact-section form {
