@@ -1,5 +1,14 @@
 <?php
     $mysql = require_once('php/includes/database.php');
+    $projects = [];
+    
+    /* Fetch the projects from MySQL */
+    $projects_query = $mysql->query('SELECT `projects`.`id`, `projects`.`name`, `categories`.`name` AS `category`, `projects`.`git` FROM `projects` INNER JOIN `project_categories` AS `categories` ON `projects`.`category` = `categories`.`id`;');
+    
+    /* Copy the projects from the results into the local array. */
+    while($project = $projects_query->fetch_assoc()) {
+        $projects[] = $project;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,21 +41,16 @@
                 <!-- Projects Section -->
                 <div id="projects-section" class="section">
                     <ul id="projects">
-                        <li class="project">
-                            <img src="images/projects/portfolio.png" />
-                        </li>
 
-                        <li class="project">
-                            2nd Project
-                        </li>
-
-                        <li class="project">
-                            3rd Project
-                        </li>
-
-                        <li class="project">
-                            4rd Project
-                        </li>
+                        <!-- Loop through every project in the array and print a list element for it. -->
+                        <?php foreach($projects as $project): ?>
+                            <li class="project">
+                                <img id="project-thumbnail" src="images/projects/<?php print($project['name']) ?>.png" />
+                                <span id="project-name"><?php print($project['name']) ?></span>
+                                <span id="project-category"><?php print($project['category']) ?></span>
+                                <a id="project-github" href="https://github.com/Serializator/<?php print($project['git']) ?>" target="_blank">View on GitHub</a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
 
@@ -86,6 +90,7 @@
 
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        
         <script src="js/navigation.js"></script>
         <script src="js/contact.js"></script>
     </body>
