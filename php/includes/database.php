@@ -1,4 +1,4 @@
 <?php
-    $config = (require_once('config/production.php'))['mysql'];
+    $config = (require_once('config.php'))['mysql'];
     return new mysqli($config['host'], $config['username'], $config['password'], $config['database'], $config['port']);
 ?>
