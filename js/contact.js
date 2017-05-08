@@ -14,7 +14,7 @@ $('#contact-section form').on('submit', function() {
             Object.keys(errors).forEach(function(key) {
                 var element = $('#' + key + '-error');
 
-                element.html(errors[key]);
+                element.html(errors[key] + '<br />');
                 element.css('display', 'inline');
             });
         } else if(status === 500) {

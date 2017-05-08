@@ -35,7 +35,12 @@
         $statement = $mysql->prepare('INSERT INTO `contact_requests` (`first_name`, `last_name`, `email`, `subject`, `message`) VALUES (?, ?, ?, ?, ?);');
         
         $statement->bind_param('sssss', $_POST['first-name'], $_POST['last-name'], $_POST['email'], $_POST['subject'], $_POST['message']);
-        $statement->execute();
+        
+        if($statement->execute() !== true) {
+            http_response_code(500);
+            $errors['unexpected'] = "Failed to send the email, try again later.";
+            print(json_encode($errors));
+        }
     } else {
         http_response_code(400);
         print(json_encode($errors));

@@ -112,14 +112,27 @@
     border-width: 1px;
     border-radius: 3px;
     color: white;
+    width: 100%;
 }
 
 #contact-section form input, textarea {
+    margin-top: 4px;
+    margin-bottom: 12px;
+
     padding: 12px;
+}
+
+#success {
+    color: green;
+}
+
+#unexpected-error {
+    color: red
 }
 
 #contact-section form button {
     padding: 12px 42px;
+    display: block;
 }
 
 #contact-section form textarea {

@@ -58,20 +58,20 @@
                 <!-- Contact Section -->
                 <div id="contact-section" class="section">
                     <form>
-                        <span id="success">Your message has been successfully delivered.</span>
+                        <span id="success">Your message has been successfully delivered.</span><br />
                         <span id="unexpected-error"></span>
-                    
+
                         <span id="first-name-error"></span>
-                        <input name="first-name" type="text" placeholder="First Name" />
+                        <input name="first-name" type="text" placeholder="First Name" /><br />
 
                         <span id="last-name-error"></span>
-                        <input name="last-name" type="text" placeholder="Last Name"/>
+                        <input name="last-name" type="text" placeholder="Last Name"/><br />
 
                         <span id="email-error"></span>
-                        <input name="email" type="text" placeholder="Email" />
+                        <input name="email" type="text" placeholder="Email" /><br />
 
                         <span id="subject-error"></span>
-                        <input name="subject" type="text" placeholder="Subject" />
+                        <input name="subject" type="text" placeholder="Subject" /><br />
 
                         <span id="message-error"></span>
                         <textarea name="message" placeholder="What do you want to say?"></textarea>
